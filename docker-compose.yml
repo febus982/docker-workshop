@@ -4,12 +4,10 @@ services:
     build: .
 #    ports:
 #      - "80:3000"
-    container_name: nodejs
     networks:
       - app-network
   nginx:
     image: nginx:mainline-alpine
-    container_name: webserver
     restart: unless-stopped
     ports:
       - "80:80"
