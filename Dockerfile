@@ -6,4 +6,6 @@ COPY src/ /app/
 
 EXPOSE 3000
 
-CMD ["node", "app/app.js"]
+WORKDIR /app
+
+CMD ["node", "app.js"]
