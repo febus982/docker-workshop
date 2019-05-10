@@ -81,3 +81,16 @@ docker rmi $(docker images -q)
 * kill all containers
 * delete all containers
 * delete all images
+
+# Docker compose
+
+```
+docker-compose up -d
+docker-compose up -d --scale nodejs=3
+docker-compose down
+docker-compose start
+docker-compose stop
+docker-compose build
+docker-compose logs -f db
+docker-compose exec nodejs /bin/sh
+```
