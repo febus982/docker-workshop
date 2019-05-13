@@ -1,11 +1,13 @@
 version: '3'
 services:
+
   nodejs:
     build: .
 #    ports:
 #      - "80:3000"
     networks:
       - app-network
+
   nginx:
     image: nginx:mainline-alpine
     restart: unless-stopped
@@ -17,6 +19,7 @@ services:
       - nodejs
     networks:
       - app-network
+
 networks:
   app-network:
     driver: bridge
